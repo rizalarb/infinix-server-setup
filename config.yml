@@ -1,0 +1,11 @@
+tunnel: infinix-server
+credentials-file: /data/data/com.termux/files/home/.cloudflared/infinix-server.json
+
+ingress:
+  - hostname: spark.example.com
+    service: http://localhost:8080
+  - hostname: hadoop.example.com
+    service: http://localhost:9870
+  - hostname: neo4j.example.com
+    service: http://localhost:7474
+  - service: http_status:404
